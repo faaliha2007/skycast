@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# 🌤️ SkyCast Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SkyCast is a **React-based weather application** that lets users check the weather of any city. The app dynamically displays a **beautiful, animated UI** based on the weather type.  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌐 Live Demo
 
-### `npm start`
+You can check the **live version** of the SkyCast Weather App here:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔗👀: https://skycast-sigma-ten.vercel.app/ 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔹 Project Explanation
 
-### `npm test`
+The project flow works like this:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Login Page (City Input)**
+   - The user enters the name of a city on the login page.
+   - A **floating stars background** and gradient animations create an interactive UI.
+   - When the user clicks **"Check Weather"**, the app makes an **API call** to OpenWeatherMap using **Axios**.
 
-### `npm run build`
+2. **Fetching Weather Data**
+   - The app requests the weather data for the entered city.
+   - It extracts **temperature**, **city name**, and **weather type** (clear, rain, snow, clouds) from the API response.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Routing to Weather Pages**
+   - Based on the **weather type**, the app dynamically navigates to a specific page:
+     - **Sunny** → `Sunny.js` → displays a clear sky animation.
+     - **Rainy** → `Rainy.js` → shows rain and lightning animations.
+     - **Snowy** → `Snowy.js` → shows snowfall with snowman and snowflakes.
+   - Each page displays:
+     - City name
+     - Temperature in Celsius
+     - Weather description
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Handling Page Refresh**
+   - If a user refreshes a weather page without navigating from the login page, the app **redirects back to the login page**.
+   - This ensures users **cannot directly access weather pages** without entering a city.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. **UI Enhancements**
+   - Animated **stars, shooting stars, clouds, snow, rain, and sun** using CSS and TailwindCSS.
+   - Floating cards with **backdrop blur**, **border effects**, and **shadow** for the weather information.
+   - Smooth transitions and hover effects for better user experience.
 
-### `npm run eject`
+6. **Tech Stack**
+   - **React** – Component-based UI
+   - **React Router** – Handles page navigation
+   - **Axios** – API requests
+   - **TailwindCSS** – Styling and animations
+   - **OpenWeatherMap API** – Weather data source
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔹 Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- ✅ Enter any city to get live weather information.
+- ✅ Dynamic routing based on weather type.
+- ✅ Interactive UI animations for different weather types.
+- ✅ Temperature, city name, and weather description displayed.
+- ✅ Automatic redirection to login if a user tries to access weather pages directly.
+- ✅ Smooth user experience with floating cards and background effects.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with 💗 by **Faali**
